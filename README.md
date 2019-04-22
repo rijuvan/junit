@@ -1,6 +1,6 @@
 # junit
 
-Topic: JUnit
+Topic: JUnit  Lab Part 1
 
 
 1.	Write test cases for  for Loan Sanction which checks the eligibility of an applicant .
@@ -41,4 +41,6 @@ Stock sample data:  Use appropriate annotation to initialize the stock
  ('SRI', 'Shelves and Radios Inc');
  ('FBC', 'Foo Bar Company');
  ('DDBC', 'Ding Dong Bell Company');
- ('UDE', 'Upn Down Eleva
+ ('UDE', 'Upn Down Elevator Company');
+ 
+ ---- End ----------------
