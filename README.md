@@ -44,3 +44,70 @@ Stock sample data:  Use appropriate annotation to initialize the stock
  ('UDE', 'Upn Down Elevator Company');
  
  ---- End ----------------
+ 
+ 
+ 
+ 
+ Topic :  Mockito and Junit : Junit , Mockito,Code Coverage ,BDD
+1.	 Example maintains a database of all books available in the library. Books are stored in a table with the following structure: ( Data base is not available so we have to use Mockito farmeowrk to test all DB Opeations )
+create table BOOKS (id int,title varchar(64), author varchar(32), publisher varchar(32),   isbn varchar(16),       pages int, category varchar(32), CONSTRAINT PK_PRODUCTS PRIMARY KEY (id));
+To keep it simple we make the following assumptions:
+•	the library has only one copy for each book
+•	each book is written only by one author
+•	each book belongs to only one category
+ The BookService Calss  should allow you to:
+•	create new entries in the BOOK table
+•	retrieves a book by title
+•	retrieve all books in a certain category
+•	retrieve all books written by a certain author
+
+Write a BookOpeationTest Class  that performs the following test using mockito . If there is a method wchich returns void then verify suing Mockito and if required also use method ordering .
+•	add 3 new books to the library
+•	find a book given its title and print the book information
+•	retrieves all books in a given category and prints their information
+•	retrieves all books written by a certain author and prints their informatio
+2.	The final example consists of writing a complete  tests  for the Library example we have been using in our assignments. 
+The library maintains a database with information about the following entities:
+•	all books available in the library
+•	users of the library
+•	which book is checked out by which user
+The above information is stored in database tables having the following definition: Database is not available 
+Create table BOOKS (
+        id int,
+        title varchar(64), 
+        author varchar(32), 
+        publisher varchar(32),
+        isbn varchar(16),
+        pages int,
+        category varchar(32),
+        user_id int,
+        CONSTRAINT PK_BOOKS PRIMARY KEY (id),
+        CONSTRAINT FK_USER FOREIGN KEY (user_id) REFERENCES USERS(id)
+);
+
+create table USERS (
+        id int,
+        name varchar(32),
+        e_mail varchar(32),
+        phone varchar(15),
+        address varchar(64),
+        CONSTRAINT PK_USERS PRIMARY KEY (ID)
+);
+
+For simplicity, we make the following assumptions:
+•	the library has only one copy for each book
+•	each book is written only by one author
+•	each book belongs to only one category
+Implement following test for below functionalities :
+•	users log into the system by providing their e-mail address and password
+•	after logging in they are allowed to browse the books by author, category, or both
+•	user can add books to a shopping cart (or list of books to check out)
+•	users can check out the books in their cart. When books are checked out, the corresponding user_id field stores the id of the user.
+•	When books are checked out an e-mail notification is sent to the user e-mail address. The content of the e-mail is a summary including the date and title, author and publisher information for each book checked out.
+•	Presumably, the books will be fetched by a clerk and given or shipped to them. However we are not implementing this feature in any way.
+•	Users can check in books from the complete list of books they have checked out.
+•	Presumably the above operation will be performed by a clerk of the library, but we let the user do it here for simplicity and to make it easy to test our application.
+Note : Assumption can be made by the developer are also accepted. Finally generate the coverage report for the application .
+
+
+
